@@ -1,0 +1,4 @@
+[submodule "tests/Auto-GPT-test-cassettes"]
+    path = tests/Auto-GPT-test-cassettes
+    url = https://github.com/pocdusky/pocAgent-test-cassettes
+    branch = master
