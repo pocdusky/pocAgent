@@ -94,7 +94,7 @@ def readable_file_size(size, decimal_places=2):
 def get_bulletin_from_web():
     try:
         response = requests.get(
-            "https://raw.githubusercontent.com/Significant-Gravitas/Auto-GPT/master/BULLETIN.md"
+            "https://raw.githubusercontent.com/pocdusky/pocAgent/main/BULLETIN.md"
         )
         if response.status_code == 200:
             return response.text
@@ -126,9 +126,9 @@ def get_latest_bulletin() -> tuple[str, bool]:
     news_header = Fore.YELLOW + "Welcome to pocAgent!\n"
     if new_bulletin or current_bulletin:
         news_header += (
-            "Below you'll find the latest Auto-GPT News and updates regarding features!\n"
+            "Below you'll find the latest pocAgent News and updates regarding features!\n"
             "If you don't wish to see this message, you "
-            "can run Auto-GPT with the *--skip-news* flag.\n"
+            "can run pocAgent with the *--skip-news* flag.\n"
         )
 
     if new_bulletin and is_new_news:
@@ -163,13 +163,13 @@ def markdown_to_ansi_style(markdown: str):
 def get_legal_warning() -> str:
     legal_text = """
 ## DISCLAIMER AND INDEMNIFICATION AGREEMENT
-### PLEASE READ THIS DISCLAIMER AND INDEMNIFICATION AGREEMENT CAREFULLY BEFORE USING THE AUTOGPT SYSTEM. BY USING THE AUTOGPT SYSTEM, YOU AGREE TO BE BOUND BY THIS AGREEMENT.
+### PLEASE READ THIS DISCLAIMER AND INDEMNIFICATION AGREEMENT CAREFULLY BEFORE USING THE POCAGENT SYSTEM. BY USING THE POCAGENT SYSTEM, YOU AGREE TO BE BOUND BY THIS AGREEMENT.
 
 ## Introduction
-AutoGPT (the "System") is a project that connects a GPT-like artificial intelligence system to the internet and allows it to automate tasks. While the System is designed to be useful and efficient, there may be instances where the System could perform actions that may cause harm or have unintended consequences.
+POCAGENT (the "System") is a project that connects a GPT-like artificial intelligence system to the internet and allows it to automate tasks. While the System is designed to be useful and efficient, there may be instances where the System could perform actions that may cause harm or have unintended consequences.
 
 ## No Liability for Actions of the System
-The developers, contributors, and maintainers of the AutoGPT project (collectively, the "Project Parties") make no warranties or representations, express or implied, about the System's performance, accuracy, reliability, or safety. By using the System, you understand and agree that the Project Parties shall not be liable for any actions taken by the System or any consequences resulting from such actions.
+The developers, contributors, and maintainers of the pocAgent project (collectively, the "Project Parties") make no warranties or representations, express or implied, about the System's performance, accuracy, reliability, or safety. By using the System, you understand and agree that the Project Parties shall not be liable for any actions taken by the System or any consequences resulting from such actions.
 
 ## User Responsibility and Respondeat Superior Liability
 As a user of the System, you are responsible for supervising and monitoring the actions of the System while it is operating on your
